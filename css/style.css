@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
 
-Polo - Multipurpose HTML5 Template
+South City Degenerates - Multipurpose HTML5 Template
 Version: 5.9.9
-Website: https://inspirothemes.com/themes/polo
-License: https://inspirothemes.com/themes/polo/license.html
+Website: https://inspirothemes.com/themes/South City Degenerates
+License: https://inspirothemes.com/themes/South City Degenerates/license.html
 Inspiro Themes (https://inspirothemes.com)
 Author: INSPIRO - Ardian Berisha
 Copyright 2021
@@ -21,7 +21,7 @@ section .page-content { padding: 0; }
 
 .rounded-circle { min-width: 1rem; min-height: 1rem; }
 
-/*! Polo Widgets */
+/*! South City Degenerates Widgets */
 .widget-list { margin: 0; padding: 0; list-style: none; }
 
 .widget-title { margin-bottom: 1.125rem; font-size: 1.08rem; font-weight: 600; }
@@ -1450,11 +1450,11 @@ a:not(.btn):not(.badge):not(.btn):not([href]):not([tabindex]) { color: #3c4043; 
 -----------------------------------------------------------------*/
 .boxed-slider { height: 600px; width: 100%; }
 
-.boxed-slider .polo-carousel-item { height: 600px; }
+.boxed-slider .South City Degenerates-carousel-item { height: 600px; }
 
 .boxed-slider .owl-bg-img { height: 100%; background-repeat: no-repeat; background-size: cover; }
 
-.polo-carousel-item img { height: 100%; }
+.South City Degenerates-carousel-item img { height: 100%; }
 
 /* ----------------------------------------------------------------
     Inspiro Slider - Responsive Classes
@@ -2501,11 +2501,11 @@ NEWS MARKETING BOX
 
 .news-ticker-content { margin-bottom: 0; padding: 14px; width: 100%; }
 
-.news-ticker-content .polo-carousel-item { margin-right: 40px; }
+.news-ticker-content .South City Degenerates-carousel-item { margin-right: 40px; }
 
-.news-ticker-content .polo-carousel-item a { white-space: nowrap; padding-right: 40px !important; }
+.news-ticker-content .South City Degenerates-carousel-item a { white-space: nowrap; padding-right: 40px !important; }
 
-.news-ticker-content .polo-carousel-item:before { color: #d82731; content: "\e9be"; font-family: inspiro-icons !important; font-size: 10px; margin-left: -32px; position: absolute; }
+.news-ticker-content .South City Degenerates-carousel-item:before { color: #d82731; content: "\e9be"; font-family: inspiro-icons !important; font-size: 10px; margin-left: -32px; position: absolute; }
 
 @media (max-width: 991.98px) { .news-ticker { display: none; } }
 
@@ -3796,7 +3796,7 @@ input.daterange:after, input.dates:after { font-family: inspiro-icons !important
 
 .daterangepicker .calendar-time select.ampmselect, .daterangepicker .calendar-time select.hourselect, .daterangepicker .calendar-time select.minuteselect { min-height: 20px; background-color: #fff !important; }
 
-/*! Polo components */
+/*! South City Degenerates components */
 input:not([type="checkbox"]):not([type="radio"]), select, .input-group-text { min-height: 40px; }
 
 .form-group { margin-bottom: 1rem; }
@@ -5378,9 +5378,9 @@ Carousels
 -----------------------------------------------------------------*/
 .flickity-viewport { overflow: hidden !important; }
 
-.flickity-slider > div > img, .carousel .polo-carousel-item img { width: 100%; }
+.flickity-slider > div > img, .carousel .South City Degenerates-carousel-item img { width: 100%; }
 
-.carousel[data-auto-width="true"] .flickity-slider > div > img, .carousel[data-auto-width="true"] .carousel .polo-carousel-item img, .carousel.custom-height .flickity-slider > div > img, .carousel.custom-height .carousel .polo-carousel-item img { height: 100%; width: auto; }
+.carousel[data-auto-width="true"] .flickity-slider > div > img, .carousel[data-auto-width="true"] .carousel .South City Degenerates-carousel-item img, .carousel.custom-height .flickity-slider > div > img, .carousel.custom-height .carousel .South City Degenerates-carousel-item img { height: 100%; width: auto; }
 
 .flickity-enabled { position: relative; }
 
@@ -5459,7 +5459,7 @@ Carousels
 
 .inspiro-slider .portfolio-item, .carousel .portfolio-item { padding-bottom: 0; }
 
-.polo-carousel-item.is-selected { z-index: 2; }
+.South City Degenerates-carousel-item.is-selected { z-index: 2; }
 
 .flickity-button-icon { fill: currentColor; }
 
@@ -5510,9 +5510,9 @@ Carousel: Dots
 
 .carousel-promotion .owl-stage-outer { overflow: unset !important; }
 
-.carousel-promotion .owl-stage-outer .polo-carousel-item { opacity: .3; -webkit-transition: opacity 400ms ease; transition: opacity 400ms ease; }
+.carousel-promotion .owl-stage-outer .South City Degenerates-carousel-item { opacity: .3; -webkit-transition: opacity 400ms ease; transition: opacity 400ms ease; }
 
-.carousel-promotion .owl-stage-outer .polo-carousel-item.active { opacity: 1; }
+.carousel-promotion .owl-stage-outer .South City Degenerates-carousel-item.active { opacity: 1; }
 
 /* Owl Carousel - Settings
 -----------------------------------------------------------------*/
@@ -6321,7 +6321,7 @@ a[data-toggle] { color: #3c4043; }
 
 .clients-carousel a:hover img { opacity: 1; cursor: pointer; }
 
-.client-carousel .polo-carousel-item img, .clients-logo .polo-carousel-item img { padding: 20px; }
+.client-carousel .South City Degenerates-carousel-item img, .clients-logo .South City Degenerates-carousel-item img { padding: 20px; }
 
 .grid { padding: 0; list-style: none; overflow: hidden; }
 
@@ -6370,7 +6370,7 @@ body.breakpoint-md .grid li, body.breakpoint-sm .grid li { width: 33.33%; }
 
 body.breakpoint-xs .grid li { width: 50%; }
 
-.client-logos .polo-carousel-item { padding: 20px 30px; }
+.client-logos .South City Degenerates-carousel-item { padding: 20px 30px; }
 
 /* ----------------------------------------------------------------------
 	Pricing Table

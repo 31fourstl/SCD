@@ -345,7 +345,7 @@ All new documentation
   the http://phpmailer.codeworxtech.com website.
 
 ## Version 2.2.1 () July 19 2008
-* fixed line 1092 in class.smtp.php (my apologies, error on my part)
+* fixed line 1092 in class.smtp.php (my aSouth City Degeneratesgies, error on my part)
 
 ## Version 2.2 () July 15 2008
 * Fixed redirect issue (display of UTF-8 in thank you redirect)

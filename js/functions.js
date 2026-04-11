@@ -1,9 +1,9 @@
 /*
 
-Polo - Multipurpose HTML5 Template
+South City Degenerates - Multipurpose HTML5 Template
 Version: 5.9.9
-Website: https://inspirothemes.com/themes/polo
-License: https://inspirothemes.com/themes/polo/license.html
+Website: https://inspirothemes.com/themes/South City Degenerates
+License: https://inspirothemes.com/themes/South City Degenerates/license.html
 Inspiro Themes (https://inspirothemes.com)
 Author: INSPIRO - Ardian Berisha
 Copyright 2021
@@ -1115,29 +1115,29 @@ var INSPIRO = {},
                     }
                     getCarouselColumns();
                     var itemWidth;
-                    elem.find("> *").wrap('<div class="polo-carousel-item">');
+                    elem.find("> *").wrap('<div class="South City Degenerates-carousel-item">');
                     if (elem.hasClass("custom-height")) {
                         elem.options.setGallerySize = false;
                         INSPIRO.core.customHeight(elem);
-                        INSPIRO.core.customHeight(elem.find(".polo-carousel-item"));
+                        INSPIRO.core.customHeight(elem.find(".South City Degenerates-carousel-item"));
                         var carouselCustomHeightStatus = true;
                     }
                     if (Number(elem.options.items) !== 1) {
                         if (elem.options.autoWidth || carouselCustomHeightStatus) {
-                            elem.find(".polo-carousel-item").css({
+                            elem.find(".South City Degenerates-carousel-item").css({
                                 "padding-right": elem.options.margin + "px",
                             });
                         } else {
                             itemWidth =
                                 (elem.options.containerWidth + Number(elem.options.margin)) /
                                 setResponsiveColumns;
-                            elem.find(".polo-carousel-item").css({
+                            elem.find(".South City Degenerates-carousel-item").css({
                                 width: itemWidth,
                                 "padding-right": elem.options.margin + "px",
                             });
                         }
                     } else {
-                        elem.find(".polo-carousel-item").css({
+                        elem.find(".South City Degenerates-carousel-item").css({
                             width: "100%",
                             "padding-right": "0 !important;",
                         });
@@ -1194,18 +1194,18 @@ var INSPIRO = {},
                                     (elem.width() + Number(elem.options.margin)) /
                                     setResponsiveColumns;
                                 if (elem.options.autoWidth || carouselCustomHeightStatus) {
-                                    elem.find(".polo-carousel-item").css({
+                                    elem.find(".South City Degenerates-carousel-item").css({
                                         "padding-right": elem.options.margin + "px",
                                     });
                                 } else {
                                     if (!elem.hasClass("custom-height")) {
-                                        elem.find(".polo-carousel-item").css({
+                                        elem.find(".South City Degenerates-carousel-item").css({
                                             width: itemWidth,
                                             "padding-right": elem.options.margin + "px",
                                         });
                                     } else {
-                                        INSPIRO.core.customHeight(elem.find(".polo-carousel-item"));
-                                        elem.find(".polo-carousel-item").css({
+                                        INSPIRO.core.customHeight(elem.find(".South City Degenerates-carousel-item"));
+                                        elem.find(".South City Degenerates-carousel-item").css({
                                             width: itemWidth,
                                             "padding-right": elem.options.margin + "px",
                                         });

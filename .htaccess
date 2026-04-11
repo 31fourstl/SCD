@@ -1,4 +1,12 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Serve static files that exist at the root level directly
+    # (template css/, js/, images/, plugins/, webfonts/, etc.)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else goes through CI4's public/ front controller
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>

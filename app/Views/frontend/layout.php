@@ -9,7 +9,7 @@
     <title>SCD – South City Degenerates<?= isset($pageTitle) ? ' | ' . esc($pageTitle) : '' ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Nunito:wght@900&display=swap" rel="stylesheet">
     <link href="<?= base_url('css/plugins.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/scd.css') ?>" rel="stylesheet">
 </head>
@@ -21,11 +21,16 @@
         <header class="scd-header" id="scd-header">
             <div class="scd-header-inner">
 
-                <!-- Brand mark + wordmark -->
-                <a href="<?= base_url('/') ?>" class="scd-logo">
-                    <span class="scd-logo-mark"></span>
-                    <span class="scd-logo-text">SC <span>SOUTH CITY DEGENERATES</span></span>
-                </a>
+                <!-- Logo -->
+                <a href="<?= base_url('/') ?>" class="scd-logo" aria-label="South City Degenerates">
+                    <?php if (file_exists(FCPATH . 'assets/images/logo.png')): ?>
+                        <img src="<?= base_url('assets/images/logo.png') ?>" alt="South City Degenerates" class="scd-logo-img">
+                    <?php else: ?>
+                        <span class="scd-logo-css" aria-hidden="true">
+                            <span class="scd-logo-south">SOUTH</span><span class="scd-logo-city">CITY</span><br>
+                            <span class="scd-logo-deg">DEGENERATES</span>
+                        </span>
+                    <?php endif; ?></a>
 
                 <!-- Desktop nav -->
                 <nav class="scd-nav">
@@ -60,9 +65,15 @@
         <footer class="scd-footer">
             <div class="scd-container">
                 <div class="scd-footer-inner">
-                    <a href="<?= base_url('/') ?>" class="scd-logo">
-                        <span class="scd-logo-mark"></span>
-                        <span class="scd-logo-text">SC <span>SOUTH CITY DEGENERATES</span></span>
+                    <a href="<?= base_url('/') ?>" class="scd-logo" aria-label="South City Degenerates">
+                        <?php if (file_exists(FCPATH . 'assets/images/logo.png')): ?>
+                            <img src="<?= base_url('assets/images/logo.png') ?>" alt="South City Degenerates" class="scd-logo-img scd-logo-img--footer">
+                        <?php else: ?>
+                            <span class="scd-logo-css" aria-hidden="true">
+                                <span class="scd-logo-south">SOUTH</span><span class="scd-logo-city">CITY</span><br>
+                                <span class="scd-logo-deg">DEGENERATES</span>
+                            </span>
+                        <?php endif; ?>
                     </a>
                     <nav class="scd-footer-nav">
                         <a href="<?= base_url('/') ?>">New Drop</a>

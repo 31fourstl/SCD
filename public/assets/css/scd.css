@@ -81,33 +81,54 @@ ul { list-style: none; }
 .scd-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
     text-decoration: none;
-}
-
-.scd-logo-mark {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
     flex-shrink: 0;
 }
 
-.scd-logo-text {
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text);
-    line-height: 1.2;
+/* Real image logo */
+.scd-logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
 }
 
-.scd-logo-text span {
+.scd-logo-img--footer {
+    height: 40px;
+}
+
+/* CSS fallback logo (matches the actual logo style) */
+.scd-logo-css {
+    display: inline-block;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.scd-logo-south {
+    font-family: 'Nunito', 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #c8179a;
+    letter-spacing: 1px;
+    margin-right: 6px;
+}
+
+.scd-logo-city {
+    font-family: 'Nunito', 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.scd-logo-deg {
     display: block;
-    font-size: 0.55rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.6rem;
+    letter-spacing: 3.5px;
+    color: #8a7a80;
+    text-transform: uppercase;
+    margin-top: 1px;
 }
 
 /* Desktop nav */

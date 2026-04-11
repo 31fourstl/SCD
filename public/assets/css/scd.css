@@ -1,0 +1,63 @@
+/* ============================================
+   SCD – South City Degenerates
+   Custom overrides on top of INSPIRO theme
+   ============================================ */
+
+/* --- Logo --- */
+#logo a {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* --- Drop Cards --- */
+.product-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.product-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --- Hero / Page Title --- */
+#page-title {
+    padding: 120px 0 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-title h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* --- Section spacing --- */
+.section-base {
+    padding: 80px 0;
+}
+
+/* --- Shopify embed --- */
+.shopify-embed iframe,
+.shopify-embed [data-product-id] {
+    max-width: 100%;
+}
+
+/* --- Footer tweaks --- */
+#footer .input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

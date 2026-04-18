@@ -23,6 +23,18 @@ CREATE TABLE IF NOT EXISTS `drops` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------
+-- Table: ci_sessions (CI4 database sessions)
+-- Eliminates dependency on writable/session/ folder permissions
+-- --------------------------------------------
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `id`         VARCHAR(128)  NOT NULL,
+  `ip_address` VARCHAR(45)   NOT NULL,
+  `timestamp`  TIMESTAMP     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data`       BLOB          NOT NULL,
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------
 -- Table: migrations (CI4 internal tracking)
 -- Tells CodeIgniter the migration has already run
 -- --------------------------------------------

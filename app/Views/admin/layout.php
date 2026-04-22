@@ -16,8 +16,12 @@
 
         <nav class="admin-nav">
             <a href="<?= site_url('admin/drops') ?>"
-               class="<?= (uri_string() === 'admin/drops' || str_starts_with(uri_string(), 'admin/drops')) ? 'active' : '' ?>">
+               class="<?= str_starts_with(uri_string(), 'admin/drops') ? 'active' : '' ?>">
                 Drops
+            </a>
+            <a href="<?= site_url('admin/settings') ?>"
+               class="<?= str_starts_with(uri_string(), 'admin/settings') ? 'active' : '' ?>">
+                Site Settings
             </a>
             <a href="<?= site_url('/') ?>" target="_blank">View Site ↗</a>
         </nav>

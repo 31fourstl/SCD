@@ -32,4 +32,8 @@ $routes->group('admin', ['filter' => 'adminauth'], static function ($routes) {
     $routes->get('drops/edit/(:num)',  'Admin\DropsController::edit/$1');
     $routes->post('drops/update/(:num)', 'Admin\DropsController::update/$1');
     $routes->post('drops/delete/(:num)', 'Admin\DropsController::delete/$1');
+
+    // Site Settings
+    $routes->get('settings',         'Admin\SettingsController::index');
+    $routes->post('settings/update', 'Admin\SettingsController::update');
 });

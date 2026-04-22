@@ -3,21 +3,25 @@
 namespace App\Controllers;
 
 use App\Models\DropsModel;
+use App\Models\SettingsModel;
 
 class Home extends BaseController
 {
     public function index(): string
     {
-        $drops = [];
+        $drops    = [];
+        $settings = [];
 
         try {
-            $model = new DropsModel();
-            $drops = $model->getActiveDrops();
+            $drops    = (new DropsModel())->getActiveDrops();
+            $settings = (new SettingsModel())->getAll();
         } catch (\Throwable $e) {
-            // Database not configured yet – show empty state gracefully
             log_message('error', 'Home::index - DB error: ' . $e->getMessage());
         }
 
-        return view('frontend/home', ['drops' => $drops]);
+        return view('frontend/home', [
+            'drops'    => $drops,
+            'settings' => $settings,
+        ]);
     }
 }

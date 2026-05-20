@@ -14,22 +14,6 @@ $accentEnd = $s['accent_color_end'] ?? '#f04cbc';
 }
 </style>
 
-<header class="editorial-topbar">
-    <div class="editorial-container editorial-nav">
-        <a class="editorial-brand" href="<?= base_url('/') ?>">
-            <span class="editorial-brand-mark">SC</span>
-            <span>South City Degenerates</span>
-        </a>
-        <nav class="editorial-nav-links">
-            <a href="#drops">New Drop</a>
-            <a href="#about">About</a>
-            <a href="#shop">Shop</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <a class="editorial-nav-cta" href="#shop">Shop the Drop</a>
-    </div>
-</header>
-
 <section class="editorial-hero" id="top">
     <div class="editorial-container editorial-hero-grid">
         <div class="editorial-hero-copy">
@@ -141,46 +125,6 @@ $accentEnd = $s['accent_color_end'] ?? '#f04cbc';
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
-    </div>
-</section>
-
-<section class="editorial-section" id="about">
-    <div class="editorial-container editorial-story-wrap">
-        <div class="editorial-story-panel">
-            <h3>Brand Story</h3>
-            <p>South City Degenerates should feel bold, nocturnal, a little rebellious, and culturally tapped in. Keep the copy short, sharp, and identity-first.</p>
-            <ul class="editorial-story-list">
-                <li>Swap in your official logo image in the header and footer.</li>
-                <li>Replace the hero and product photography with real campaign assets.</li>
-                <li>Change button links to direct collection or product pages once Shopify URLs are finalized.</li>
-                <li>Keep only one or two primary calls to action per section.</li>
-            </ul>
-            <div class="editorial-quote">Built for late nights, loud rooms, and people who know exactly who they are.</div>
-        </div>
-
-        <div class="editorial-embed-shell" id="shop">
-            <div class="editorial-embed-header">
-                <div>
-                    <h3>Shop the Store</h3>
-                    <p>Embedded storefront experience with a direct fallback link.</p>
-                </div>
-                <a class="editorial-btn-secondary" href="https://store.lushlemur.com/" target="_blank" rel="noopener noreferrer">Open Store</a>
-            </div>
-            <iframe class="editorial-store-frame" src="https://store.lushlemur.com/" title="South City Degenerates Storefront" loading="lazy"></iframe>
-            <div class="editorial-embed-note">If the iframe is too heavy, replace this with a Shopify Buy Button embed, featured collection grid, or a direct checkout CTA.</div>
-        </div>
-    </div>
-</section>
-
-<section class="editorial-section" id="contact">
-    <div class="editorial-container">
-        <div class="editorial-cta-band">
-            <div>
-                <h3>Ready for the Next Drop</h3>
-                <p>This page now follows the darker premium editorial direction: sharp hero, focused product blocks, brand story, and a clean checkout path.</p>
-            </div>
-            <a class="editorial-btn-primary" href="https://store.lushlemur.com/" target="_blank" rel="noopener noreferrer">Go to Checkout Path</a>
-        </div>
     </div>
 </section>
 

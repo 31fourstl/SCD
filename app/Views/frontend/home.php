@@ -8,7 +8,7 @@ $accentStart = $s['accent_color']     ?? '#d61ca0';
 $accentEnd   = $s['accent_color_end'] ?? '#f04cbc';
 $heroBg      = !empty($s['hero_bg_image'])
     ? 'url(' . base_url('uploads/hero/' . esc($s['hero_bg_image'])) . ')'
-    : 'none';
+    : 'url(' . base_url('images/about/9.jpg') . ')';
 ?>
 
 <!-- Dynamic CSS variables from settings -->
@@ -22,68 +22,48 @@ $heroBg      = !empty($s['hero_bg_image'])
 <!-- ═══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section class="scd-hero" style="<?= $heroBg !== 'none' ? "background-image:{$heroBg}; background-size:cover; background-position:center;" : '' ?>">
-    <?php if ($heroBg !== 'none'): ?>
-        <div class="scd-hero-bg-overlay"></div>
-    <?php endif; ?>
+<section class="scd-hero scd-hero--cinematic" aria-labelledby="scd-hero-title" style="background-image: <?= $heroBg ?>;">
+    <div class="scd-hero-bg-overlay"></div>
 
-    <div class="scd-container" style="position:relative; z-index:1;">
-        <div class="scd-hero-grid">
+    <div class="scd-container scd-hero-cinematic-inner">
+        <div class="scd-hero-cinematic-copy">
+            <p class="scd-hero-eyebrow">LET'S DO THIS</p>
+            <h1 id="scd-hero-title" class="scd-hero-cinematic-heading">
+                <?= esc($s['hero_heading_line1'] ?? 'South City') ?><br>
+                <?= esc($s['hero_heading_line2'] ?? 'Degenerates') ?>
+            </h1>
 
-            <!-- Left: copy -->
-            <div class="scd-hero-copy">
-                <?php if (!empty($s['hero_badge_1']) || !empty($s['hero_badge_2']) || !empty($s['hero_badge_3'])): ?>
-                <div class="scd-badge-row">
-                    <?php foreach (['hero_badge_1','hero_badge_2','hero_badge_3'] as $bk): ?>
-                        <?php if (!empty($s[$bk])): ?>
-                            <span class="scd-badge"><?= esc($s[$bk]) ?></span>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
-                <?php endif; ?>
+            <p class="scd-hero-cinematic-sub">
+                <?= esc($s['hero_subtext'] ?? 'Limited-run streetwear for the loud, loyal, and beautifully unruly side of St. Louis.') ?>
+            </p>
 
-                <h1 class="scd-hero-heading">
-                    <?= esc($s['hero_heading_line1'] ?? 'BUILT FOR THE') ?><br>
-                    <span class="scd-gradient-text"><?= esc($s['hero_heading_line2'] ?? 'SOUTH SIDE') ?></span>
-                </h1>
-
-                <?php if (!empty($s['hero_subtext'])): ?>
-                <p class="scd-hero-sub"><?= esc($s['hero_subtext']) ?></p>
-                <?php endif; ?>
-
-                <div class="scd-hero-actions">
-                    <a href="<?= base_url('/shop') ?>" class="scd-btn-primary">
-                        <?= esc($s['hero_btn_primary'] ?? 'Shop Now') ?>
-                    </a>
-                    <a href="#drops" class="scd-btn-ghost">
-                        <?= esc($s['hero_btn_secondary'] ?? 'View Drops') ?>
-                    </a>
-                </div>
-
-                <div class="scd-hero-stats">
-                    <?php foreach ([1,2,3] as $i): ?>
-                        <?php if (!empty($s["hero_stat{$i}_value"])): ?>
-                        <div class="scd-stat">
-                            <strong><?= esc($s["hero_stat{$i}_value"]) ?></strong>
-                            <span><?= esc($s["hero_stat{$i}_label"] ?? '') ?></span>
-                        </div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
+            <div class="scd-hero-actions scd-hero-cinematic-actions">
+                <a href="<?= base_url('/shop') ?>" class="scd-btn-primary scd-hero-main-btn">
+                    <?= esc($s['hero_btn_primary'] ?? 'Shop the Drop') ?>
+                </a>
+                <a href="#drops" class="scd-btn-ghost scd-hero-secondary-btn">
+                    <?= esc($s['hero_btn_secondary'] ?? 'View Drops') ?>
+                </a>
             </div>
+        </div>
 
-            <!-- Right: hero card -->
-            <div class="scd-hero-card">
-                <div class="scd-hero-img-wrap">
-                    <img src="<?= base_url('images/about/9.jpg') ?>" alt="SCD Drop" class="scd-hero-img">
-                    <div class="scd-hero-img-overlay"></div>
-                </div>
-                <div class="scd-hero-card-badge">
-                    <span class="scd-dot"></span>
-                    <span>New Drop Available Now</span>
-                </div>
-            </div>
-
+        <div class="scd-hero-feature-row" aria-label="South City Degenerates brand pillars">
+            <article class="scd-hero-feature-card">
+                <h2>Limited Drops</h2>
+                <p>No mass production. Small runs, real demand, and pieces made to feel like local artifacts.</p>
+            </article>
+            <article class="scd-hero-feature-card">
+                <h2>South City Made</h2>
+                <p>Built from neighborhood bars, basement shows, corner-store runs, and late-night STL energy.</p>
+            </article>
+            <article class="scd-hero-feature-card">
+                <h2>Degenerate Energy</h2>
+                <p>For the ones who show up loud, stay outside too late, and never leave the block behind.</p>
+            </article>
+            <article class="scd-hero-feature-card">
+                <h2>Local Uniform</h2>
+                <p>Streetwear for the regulars, creatives, lifers, outsiders, and beautifully questionable characters.</p>
+            </article>
         </div>
     </div>
 </section>
@@ -121,7 +101,7 @@ $heroBg      = !empty($s['hero_bg_image'])
                     <div class="scd-drop-body">
                         <h3 class="scd-drop-title"><?= esc($drop['title']) ?></h3>
                         <?php if (!empty($drop['drop_date'])): ?>
-                            <p class="scd-drop-date"><?= date('F j, Y \a\t g:i A', strtotime($drop['drop_date'])) ?></p>
+                            <p class="scd-drop-date"><?= date('F j, Y \\a\\t g:i A', strtotime($drop['drop_date'])) ?></p>
                         <?php endif; ?>
                         <?php if (!empty($drop['description'])): ?>
                             <p class="scd-drop-desc"><?= esc($drop['description']) ?></p>

@@ -1,0 +1,194 @@
+/* Cinematic SCD Hero Overrides */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+    border-bottom: none;
+}
+
+.site-header .container,
+.site-header .scd-container {
+    max-width: 1400px;
+}
+
+.scd-hero--cinematic {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.scd-hero--cinematic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(2px);
+    transform: scale(1.03);
+    z-index: 0;
+}
+
+.scd-hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.58) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(0,0,0,.78) 100%);
+    z-index: 1;
+}
+
+.scd-hero-cinematic-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1400px, 92%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.scd-hero-cinematic-copy {
+    max-width: 1080px;
+}
+
+.scd-hero-eyebrow {
+    display: inline-flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin-bottom: 1.4rem;
+    color: rgba(255,255,255,.92);
+    font-size: .85rem;
+    font-weight: 900;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.scd-hero-eyebrow::after {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: #fff;
+}
+
+.scd-hero-cinematic-heading {
+    max-width: 1180px;
+    color: #fff;
+    font-size: clamp(4.5rem, 8.4vw, 8.6rem);
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    text-transform: none;
+    text-shadow: 0 18px 44px rgba(0,0,0,.42);
+}
+
+.scd-hero-cinematic-sub {
+    max-width: 720px;
+    margin-top: 1.4rem;
+    color: rgba(255,255,255,.82);
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.75;
+}
+
+.scd-hero-cinematic-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.scd-hero-main-btn,
+.scd-hero-secondary-btn {
+    border-radius: 999px;
+    padding: .95rem 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.scd-hero-main-btn {
+    background: #3557ff;
+    color: #fff;
+    box-shadow: 0 18px 38px rgba(53,87,255,.28);
+}
+
+.scd-hero-secondary-btn {
+    border: 1px solid rgba(255,255,255,.34);
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.scd-hero-feature-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: auto;
+    padding-top: 5rem;
+}
+
+.scd-hero-feature-card {
+    color: #fff;
+}
+
+.scd-hero-feature-card h2 {
+    margin-bottom: .75rem;
+    color: #fff;
+    font-size: clamp(1.15rem, 1.4vw, 1.45rem);
+    line-height: 1.15;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+.scd-hero-feature-card p {
+    max-width: 330px;
+    color: rgba(255,255,255,.78);
+    font-size: 1rem;
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+    .scd-hero-feature-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        position: absolute;
+    }
+
+    .scd-hero--cinematic,
+    .scd-hero-cinematic-inner {
+        min-height: auto;
+    }
+
+    .scd-hero-cinematic-inner {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+    }
+
+    .scd-hero-cinematic-heading {
+        font-size: clamp(3.2rem, 16vw, 5.2rem);
+    }
+
+    .scd-hero-feature-row {
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+    }
+}

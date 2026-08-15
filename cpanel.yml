@@ -1,0 +1,29 @@
+---
+# .cpanel.yml — cPanel Git deployment for the SCD site
+#
+# Place this file in the TOP-LEVEL directory of the repo (/home1/cloud314/SCD)
+# and commit it to the branch you deploy from (currently:
+# claude/customize-codeigniter-template-Bt4rY).
+#
+# cPanel runs these tasks, top to bottom, as BASH commands when you click
+# "Deploy HEAD Commit" in Git Version Control (or automatically on push).
+
+deployment:
+  tasks:
+    # 1) TARGET = your subdomain's Document Root.
+    #    Find it in cPanel » Domains — the "Document Root" column for your
+    #    subdomain (it will look something like the example below).
+    #    Replace the path, and keep the trailing slash.
+    - export DEPLOYPATH=/home1/cloud314/scd.cloud314.com/public/
+
+    # 2) Make sure the target directory exists.
+    - /bin/mkdir -p "$DEPLOYPATH"
+
+    # 3) Mirror the repository into the doc root.
+    #    rsync copies everything EXCEPT the excluded items. Excluding .git is
+    #    important — cPanel warns that deploying it can cause serious problems.
+    - /usr/bin/rsync -av --exclude='.git' --exclude='.gitignore' --exclude='.cpanel.yml' --exclude='node_modules' --exclude='README.md' ./ "$DEPLOYPATH"
+
+    # 4) (CodeIgniter 4 only) ensure the runtime folder is writable.
+    #    Uncomment if your app has a writable/ directory.
+    # - /bin/chmod -R 0755 "$DEPLOYPATH/writable"

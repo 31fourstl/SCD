@@ -14,7 +14,7 @@ deployment:
     #    Find it in cPanel » Domains — the "Document Root" column for your
     #    subdomain (it will look something like the example below).
     #    Replace the path, and keep the trailing slash.
-    - export DEPLOYPATH=/home1/cloud314/scd.cloud314.com/public/
+    - export DEPLOYPATH=/home1/cloud314/scd.cloud314.com/
 
     # 2) Make sure the target directory exists.
     - /bin/mkdir -p "$DEPLOYPATH"
